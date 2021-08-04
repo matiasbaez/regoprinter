@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin
+    id="cordova.plugin.regoprinter"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>RegoPrinterPlugin</name>
+
+    <js-module name="RegoPrinterPlugin" src="www/RegoPrinterPlugin.js">
+        <clobbers target="cordova.plugins.regoprinter" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="RegoPrinterPlugin">
+                <param name="android-package" value="cordova.plugin.regoprinter" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+        <framework src="com.speedata:deivice:1.5"/>
+
+        <source-file src="src/android/libs/regoPrintLibV3.01.03.jar" target-dir="libs" />
+        <source-file src="src/android/utils/preDefiniation.java" target-dir="src/cordova/plugin/regoprinter/utils" />
+        <source-file src="src/android/utils/ApplicationContext.java" target-dir="src/cordova/plugin/regoprinter/utils" />
+        <source-file src="src/android/ConnectPrinter.java" target-dir="src/cordova/plugin/regoprinter" />
+        <source-file src="src/android/RegoPrinterPlugin.java" target-dir="src/cordova/plugin/regoprinter" />
+    </platform>
+</plugin>

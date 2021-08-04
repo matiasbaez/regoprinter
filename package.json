@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-regoprinter",
+  "version": "1.0.0",
+  "description": "This plugin was created to manage rego thermal printer",
+  "cordova": {
+    "id": "cordova-plugin-regoprinter",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasbaez/regoprinter.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Matías Báez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasbaez/regoprinter/issues"
+  },
+  "homepage": "https://github.com/matiasbaez/regoprinter#readme"
+}
