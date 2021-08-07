@@ -22,6 +22,7 @@ public class RegoPrinterPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("connect")) {
             this.connect();
+            return true;
         } else if (action.equals("print")) {
             String message = args.getString(0);
             this.print(message, callbackContext);
